@@ -12,6 +12,7 @@ const OFFLINE_URL = '/index.html';
 
 // static URLs that can be copied from cache to cache.
 const IMMUTABLE = [
+  '/',
   // HTML
   '/index.html',
   '/offline.html',
