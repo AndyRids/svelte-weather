@@ -1,0 +1,10 @@
+// [snowpack] add styles to the page (skip if no document exists)
+if (typeof document !== 'undefined') {
+  const code = ".heading-back.svelte-1uyh45i.svelte-1uyh45i{align-self:center;align-items:center;border-radius:5px;cursor:pointer;display:grid;gap:2px;grid-template-columns:20px 1fr;text-align:center;transition:background 500ms}.heading-back.svelte-1uyh45i.svelte-1uyh45i:hover{background:var(--bg-hover)}.heading-back__title.svelte-1uyh45i.svelte-1uyh45i{font-size:1.1rem;font-weight:600;padding-right:4px}.search.svelte-1uyh45i.svelte-1uyh45i{align-items:center;display:grid;gap:1px;grid-template-columns:1fr auto;justify-items:center;margin-bottom:5px;width:100%}.search__input.svelte-1uyh45i.svelte-1uyh45i{border-radius:4px;box-shadow:3px 3px 4px -1px var(--box-shadow-1),\r\n                1px 1px 3px 1px var(--box-shadow-1);height:32px;width:100%}.input.svelte-1uyh45i.svelte-1uyh45i{border:none;cursor:pointer;font-family:inherit;font-size:1.1rem;padding:0 5px}.input.svelte-1uyh45i.svelte-1uyh45i::placeholder{font-size:1.1rem;font-style:italic;opacity:0.9}.input.svelte-1uyh45i.svelte-1uyh45i:focus{outline-style:solid;outline-color:transparent;box-shadow:0 0 0 3px #5a7abe}.search__input.svelte-1uyh45i.svelte-1uyh45i:invalid,.search__input.svelte-1uyh45i.svelte-1uyh45i:focus:invalid{box-shadow:0 0 0 3px #be5a5a}.search__input.svelte-1uyh45i:invalid+.search__button.svelte-1uyh45i{background:#f5898980;cursor:not-allowed;pointer-events:none}.search-results.svelte-1uyh45i.svelte-1uyh45i{align-items:center;background-image:var(--bg-card);border-radius:4px;box-shadow:var(--box-shadow-1),\r\n                var(--box-shadow-2);display:grid;font-weight:600;grid-auto-rows:auto;justify-items:center;text-align:left;width:100%}.search-results__result.svelte-1uyh45i.svelte-1uyh45i{padding:2px 5px;transition:background 500ms;width:100%}.search-results__result.svelte-1uyh45i.svelte-1uyh45i:hover{background:#89abf580;cursor:pointer}";
+
+  const styleEl = document.createElement("style");
+  const codeEl = document.createTextNode(code);
+  styleEl.type = 'text/css';
+  styleEl.appendChild(codeEl);
+  document.head.appendChild(styleEl);
+}
