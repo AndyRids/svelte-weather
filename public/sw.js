@@ -107,6 +107,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(request).then((response) => {
       // return response from cache if found
+      console.log('respondWith:', response);
       if (response) return response;
 
       return fetch(request).catch(() => {
