@@ -1,5 +1,4 @@
 .build
-build
 .env
 web_modules
 node_modules
