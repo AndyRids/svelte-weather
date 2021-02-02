@@ -29,7 +29,7 @@
 
       <article class="hour-card">
         <div on:pointerdown="{changeIndex}" class="hour-card__header {index === hourlyIndex ? 'header--highlight' : ''}" data-index="{index}">
-          <h3 class="hour-card__title">Details</h3>
+          <h4 class="hour-card__title">Details</h4>
           <img src="./icons/headers/pointer.svg" alt="Arrow icon" class="hour-card__title-icon" height="20px" width="20px" />
         </div>
       
@@ -51,6 +51,7 @@
     box-shadow: var(--box-shadow-1),
                 var(--box-shadow-2);
     border-radius: 4px;
+    cursor: grabbing;
     cursor: grab;
     display: flex;
     overflow-y: hidden;
@@ -70,6 +71,7 @@
     justify-content: space-between;
     flex-direction: column;
     min-width: calc(100% / 4 + 0px);
+    -webkit-user-select: none;
     user-select: none;
   }
 
@@ -96,6 +98,7 @@
   .header--highlight > .hour-card__title-icon { transform: rotate(-90deg); }
 
   .hour-card__title {
+    max-width: -moz-fit-content;
     max-width: fit-content;
     margin: 0;
     padding: 0;

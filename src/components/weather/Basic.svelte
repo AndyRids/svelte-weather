@@ -26,9 +26,6 @@
   // is current city bookmarked by the user
   $: isBookmarked = checkBookmarks(bookmarks, longLabel);
 
-  $: console.log('Watching:', bookmarkIndex);
-
-
   // tempUnit[units] ({ units } = $databaseStore.settings) is used to display 'C'/'F'
   const tempUnit = { metric: 'C', imperial: 'F' };
 

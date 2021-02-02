@@ -1,5 +1,5 @@
 <script>
-  
+  // daily weather data
   export let daily;
 
 </script>
@@ -34,7 +34,7 @@
                 var(--box-shadow-2);
     display: grid;
     gap: 8px 5px;
-    grid-auto-rows: max(44px, auto);
+    grid-auto-rows: 25px;
     grid-template-columns: 1fr 45px 45px repeat(2, 46px);
     justify-items: center;
     margin-bottom: 4px;

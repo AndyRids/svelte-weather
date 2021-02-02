@@ -20,7 +20,6 @@
   
 </div>
 
-
 <style>
   .wrapper-spinner {
     align-items: center;
@@ -41,8 +40,6 @@
     border-style: solid;
     border-image: initial;
     border-radius: 50%;
-    box-shadow: var(--box-shadow-1),
-                var(--box-shadow-1);
     height: var(--size);
     width: var(--size);
     }
