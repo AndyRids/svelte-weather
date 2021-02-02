@@ -8,8 +8,6 @@ const CACHE_NAME = 'svelte-weather-cache-v1';
 
 const APP_FONT = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap';
 
-const OFFLINE_URL = '/index.html';
-
 // static URLs that can be copied from cache to cache.
 const IMMUTABLE = [
   '/',
@@ -102,12 +100,10 @@ self.addEventListener('fetch', (event) => {
   // request object
   const { request } = event;
 
-  // default action: cache first, fallback to network or offline
+  // default action: cache first, fallback to network
   event.respondWith(
     caches.match(request).then((response) => {
       // return response from cache if found
-      console.log('respondWith:', response);
-
       if (response) return response;
 
       return fetch(request);

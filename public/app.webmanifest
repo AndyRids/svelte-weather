@@ -1,5 +1,5 @@
 {
-  "short_name": "Svelte-Weather",
+  "short_name": "Weather App",
   "name": "Svelte Weather App",
   "description": "PWA weather app, using OpenWeatherMap API",
   "start_url": "/index.html",
