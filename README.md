@@ -1,7 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/08de02f1-e42e-4325-b828-4ed071ef9f70/deploy-status)](https://app.netlify.com/sites/svelte-open-weather/deploys)
-
-# Svelte Weather App
 [https://svelte-open-weather.netlify.app/](https://svelte-open-weather.netlify.app/)
+# Svelte Weather App
+
 ![Site preview](https://github.com/AndyRids/svelte-weather/blob/main/svelte-weather-preview.jpg)
 
 JAMStack PWA weather app, using [LocationIQ](https://locationiq.com/) API for forward and reverse geocode and [OpenWeatherMap](https://openweathermap.org/) API for the weather data. [Netlify functions (AWS Lambda)](https://docs.netlify.com/functions/overview/) are used to connect the frontend with the backend APIs. [Chart.js](https://www.chartjs.org/) is used to visualise the weather data. [Snowpack](https://www.snowpack.dev/) was used as the build tool.
