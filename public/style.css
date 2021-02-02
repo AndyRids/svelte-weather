@@ -117,6 +117,7 @@
 .page-body {
   background: var(--bg-main);
   background-blend-mode: normal, color-burn;
+  height: 100vh;
   margin: 0;
   overflow: hidden;
   padding: 0;
