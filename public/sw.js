@@ -15,7 +15,6 @@ const IMMUTABLE = [
   '/',
   // HTML
   '/index.html',
-  '/offline.html',
   // CSS
   '/style.css',
   // font
@@ -108,11 +107,10 @@ self.addEventListener('fetch', (event) => {
     caches.match(request).then((response) => {
       // return response from cache if found
       console.log('respondWith:', response);
+
       if (response) return response;
 
-      return fetch(request).catch(() => {
-        caches.match(OFFLINE_URL).then((offline) => offline);
-      });
+      return fetch(request);
     })
   );
 });
