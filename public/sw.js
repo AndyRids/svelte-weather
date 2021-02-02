@@ -10,7 +10,6 @@ const APP_FONT = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@40
 
 // static URLs that can be copied from cache to cache.
 const IMMUTABLE = [
-  '/',
   // HTML
   '/index.html',
   // CSS
@@ -80,18 +79,24 @@ self.addEventListener('install', (event) => {
          * each URL from immutable found in the existing cache, has its entry copied
          * into the new cache. Those not found, are placed into the newImmutable array.
          */
-        IMMUTABLE.map((url) => caches.match(url).then(
-          (response) => (response ? cache.put(url, response) : (newImmutable.push(url), Promise.resolve()))
-        ))
+        IMMUTABLE.map((url) => caches.match(url).then((response) => {
+          // if response, put it into the cache
+          if (response) return cache.put(url, response);
+
+          // else add url to new Immutable array
+          newImmutable.push(url);
+
+          // resolve promise
+          return Promise.resolve();
+        }))
+
         /**
          * only fetch URLs from IMMUTABLE not found in existing cache (newImmutable) and URLs in
          * MUTABLE (files that change with each site version), before adding them to the new cache.
          * Any URLs present in existing cache maching those in IMMUTABLE, were already copied (put)
          * into the new cache.
          */
-      ).then(() => {
-        cache.addAll([...newImmutable, ...MUTABLE]);
-      });
+      ).then(() => cache.addAll([...newImmutable, ...MUTABLE]));
     })
   );
 });
