@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/08de02f1-e42e-4325-b828-4ed071ef9f70/deploy-status)](https://app.netlify.com/sites/svelte-open-weather/deploys)
-[https://svelte-open-weather.netlify.app/](https://svelte-open-weather.netlify.app/)
-# Svelte Weather App
+
+# Svelte Weather App ([view site](https://svelte-open-weather.netlify.app/))
 
 ![Site preview](https://github.com/AndyRids/svelte-weather/blob/main/svelte-weather-preview.jpg)
 
