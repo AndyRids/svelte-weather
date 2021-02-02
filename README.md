@@ -2,6 +2,8 @@
 
 # Svelte Weather App
 
+![Site preview](https://github.com/AndyRids/svelte-weather/blob/main/svelte-weather-preview.jpg)
+
 JAMStack PWA weather app, using [LocationIQ](https://locationiq.com/) API for forward and reverse geocode and [OpenWeatherMap](https://openweathermap.org/) API for the weather data. [Netlify functions (AWS Lambda)](https://docs.netlify.com/functions/overview/) are used to connect the frontend with the backend APIs. [Chart.js](https://www.chartjs.org/) is used to visualise the weather data. [Snowpack](https://www.snowpack.dev/) was used as the build tool.
 
 The app also uses IndexedDB to persist user settings and bookmarked locations. The API is wrapped to make it promise based and easier to use with a web worker, which is used to intialise, open the DB and store and retrieve data.
@@ -34,6 +36,15 @@ Build requires [Netlify CLI](https://docs.netlify.com/cli/get-started/).
 * ```netlify.toml```
 
   Development & build settings are already entered, with comments, in the netlify.toml file.
+
+* ```.env & evironment variables```
+
+  Environment variables were set in a .env file and in the Netlify site build & deploy settings
+
+  ```
+  OPEN_WEATHER_KEY = cb6a533dd...
+  LOCATION_IQ_KEY = pk.cb58268...
+  ```
 
 * ```netlify dev```
 
