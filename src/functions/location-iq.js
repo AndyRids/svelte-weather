@@ -1,7 +1,4 @@
 /* eslint-disable */
-// https://us1.locationiq.com/v1/search.php?key=pk.cb582687ed56f9511beb5b71d861a123&city=london&addressdetails=1&format=json
-// https://us1.locationiq.com/v1/reverse.php?key=pk.cb582687ed56f9511beb5b71d861a123&lat=51.509865&lon=-0.118092&zoom=10&format=json
-
 const fetch = require('node-fetch')
 
 exports.handler = async function(event, context) {
